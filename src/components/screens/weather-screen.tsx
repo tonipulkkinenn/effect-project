@@ -3,6 +3,7 @@ import { useAsyncData } from "../../hooks/use-async-data";
 import { Alert, Box, CircularProgress, MenuItem, Snackbar, TextField, Typography } from "@mui/material";
 import { useState } from "react";
 import { WeatherApiResponse } from "types";
+import Config from "app/config";
 
 interface SnackbarOptions {
   open: boolean;
@@ -27,7 +28,7 @@ const WeatherScreen = () => {
           fetch(`https://api.weatherapi.com/v1/current.json?${
             new URLSearchParams({
               q: selectedCity,
-              key: "04574337f4394b0c809114337243009"
+              key: Config.get().apiKey
             })}`
           ),
         catch: () => new Error("Network Error: Unable to reach the API.")

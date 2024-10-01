@@ -1,4 +1,4 @@
-import { Home, WbSunny } from "@mui/icons-material";
+import { WbSunny } from "@mui/icons-material";
 import { AppBar, styled, Tab, Tabs, Toolbar } from "@mui/material";
 import { useMatch, useNavigate } from "react-router-dom";
 
@@ -14,8 +14,8 @@ const Header = () => {
   const navigate = useNavigate();
   const match = useMatch("/:route/*");
 
-  type Path = "home" | "weather";
-  const route: Path = (match?.params.route as Path) || "home";
+  type Path = "weather";
+  const route: Path = (match?.params.route as Path) || "weather";
 
   return (
     <AppBar position="static" sx={{ p: 0, backgroundColor: "lighblue" }}>
@@ -25,12 +25,11 @@ const Header = () => {
           onChange={(_, value) => navigate(`/${value}`)}
           TabIndicatorProps={{ sx: { height: "100%", background: "white" } }}
         >
-          <TabItem value="home" label="Home" icon={ <Home /> } />
-          <TabItem value="weather" label="Weather" icon={ <WbSunny /> }/>
+          <TabItem value="weather" label="Weather" icon={ <WbSunny/> }/>
         </Tabs>
       </Toolbar>
     </AppBar>
   );
-}
+};
 
 export default Header;

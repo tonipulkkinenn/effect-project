@@ -1,5 +1,4 @@
 import { createBrowserRouter, Navigate, RouterProvider } from "react-router-dom";
-import HomeScreen from "./components/screens/home-screen";
 import AppLayout from "./layouts/app-layout";
 import WeatherScreen from "./components/screens/weather-screen";
 
@@ -9,11 +8,7 @@ const router = createBrowserRouter([
     children: [
       {
         index: true,
-        element: <Navigate to="/home"/>
-      },
-      {
-        path: "home",
-        element: <HomeScreen/>
+        element: <Navigate to="/weather"/>
       },
       {
         path: "weather",

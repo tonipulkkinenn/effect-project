@@ -57,3 +57,7 @@ export interface WeatherApiResponse {
   location: Location;
   current: Current;
 }
+
+export interface Configuration {
+  apiKey: string;
+}
