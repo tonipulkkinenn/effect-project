@@ -1,0 +1,208 @@
+{
+  "env": {
+    "browser": true,
+    "es2021": true
+  },
+  "extends": [
+    "airbnb",
+    "plugin:@typescript-eslint/recommended",
+    "airbnb-typescript",
+    "airbnb/hooks"
+  ],
+  "parser": "@typescript-eslint/parser",
+  "parserOptions": {
+    "ecmaFeatures": {
+      "jsx": true
+    },
+    "ecmaVersion": 12,
+    "sourceType": "module",
+    "project": "./tsconfig.json"
+  },
+  "plugins": [
+    "react",
+    "@typescript-eslint"
+  ],
+  "rules": {
+    "@typescript-eslint/ban-types": [
+      "error",
+      {
+        "types": {
+          // un-ban a type that's banned by default
+          "{}": false,
+          "object": false,
+          "any": false
+        },
+        "extendDefaults": true
+      }
+    ],
+    "@typescript-eslint/comma-dangle": [
+      "error",
+      "never"
+    ],
+    "@typescript-eslint/explicit-module-boundary-types": "off",
+    "@typescript-eslint/indent": [
+      "error",
+      2
+    ],
+    "@typescript-eslint/lines-between-class-members": [
+      "error",
+      "always",
+      {
+        "exceptAfterSingleLine": true
+      }
+    ],
+    "@typescript-eslint/naming-convention": [
+      "error",
+      {
+        "selector": "variable",
+        "format": [
+          "camelCase",
+          "UPPER_CASE",
+          "PascalCase"
+        ]
+      }
+    ],
+    "@typescript-eslint/no-explicit-any": "off",
+    "@typescript-eslint/no-unused-expressions": [
+      "error",
+      {
+        "allowShortCircuit": true,
+        "allowTernary": true
+      }
+    ],
+    "@typescript-eslint/quotes": [
+      "error",
+      "double"
+    ],
+    "@typescript-eslint/semi": [
+      "error",
+      "always"
+    ],
+    "@typescript-eslint/space-before-blocks": "off",
+    "computed-property-spacing": "off",
+    "array-bracket-spacing": "off",
+    "arrow-body-style": "off",
+    "arrow-parens": [
+      "error",
+      "as-needed"
+    ],
+    "consistent-return": "off",
+    "eol-last": [
+      "error",
+      "never"
+    ],
+    "function-paren-newline": "off",
+    "implicit-arrow-linebreak": "off",
+    "import/no-duplicates": "off",
+    "import/no-extraneous-dependencies": "off",
+    "import/order": "off",
+    "indent": "off",
+    "linebreak-style": 0,
+    "max-len": [
+      "error",
+      {
+        "code": 160,
+        "tabWidth": 2,
+        "ignoreComments": true,
+        "ignoreTrailingComments": true,
+        "ignoreUrls": true,
+        "ignoreStrings": true,
+        "ignoreTemplateLiterals": true,
+        "ignoreRegExpLiterals": true
+      }
+    ],
+    "no-duplicate-imports": "error",
+    "no-extra-semi": "error",
+    "no-multiple-empty-lines": [
+      "error",
+      {
+        "max": 1,
+        "maxBOF": 0,
+        "maxEOF": 0
+      }
+    ],
+    "@typescript-eslint/no-namespace": "off",
+    "no-param-reassign": [
+      "error",
+      {
+        "props": false
+      }
+    ],
+    "no-plusplus": [
+      "error",
+      {
+        "allowForLoopAfterthoughts": true
+      }
+    ],
+    "no-tabs": [
+      "error",
+      {
+        "allowIndentationTabs": true
+      }
+    ],
+    "no-trailing-spaces": [
+      "error",
+      {
+        "skipBlankLines": true,
+        "ignoreComments": true
+      }
+    ],
+    "no-unused-vars": "error",
+    "object-curly-newline": [
+      "error",
+      {
+        "ObjectExpression": {
+          "multiline": true,
+          "minProperties": 3,
+          "consistent": true
+        },
+        "ImportDeclaration": "never",
+        "ExportDeclaration": "never"
+      }
+    ],
+    "object-curly-spacing": [
+      "error",
+      "always"
+    ],
+    "object-shorthand": [
+      "error",
+      "consistent"
+    ],
+    "operator-linebreak": "off",
+    "padded-blocks": [
+      "error",
+      {
+        "classes": "always",
+        "blocks": "never",
+        "switches": "never"
+      }
+    ],
+    "react/destructuring-assignment": [
+      "error",
+      "always"
+    ],
+    "react/function-component-definition": [
+      2,
+      {
+        "namedComponents": "arrow-function"
+      }
+    ],
+    "react/jsx-boolean-value": "off",
+    "react/jsx-curly-newline": "off",
+    "react/jsx-curly-spacing": "off",
+    "react/react-in-jsx-scope": "off",
+    "react/jsx-props-no-spreading": "off",
+    "react/jsx-tag-spacing": [
+      "error",
+      {
+        "beforeSelfClosing": "never"
+      }
+    ],
+    "react/jsx-uses-react": "off",
+    "react/jsx-wrap-multilines": "off",
+    "react/prop-types": "off",
+    "react/require-default-props": "off",
+    "require-jsdoc": "off",
+    "react-hooks/exhaustive-deps": "off"
+  }
+}
